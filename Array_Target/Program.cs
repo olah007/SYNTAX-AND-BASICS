@@ -14,7 +14,28 @@ namespace Array_Target
             int[] nums = new int[] { 3, 4, 2, 7 };
             int target = 9;
 
-            AddNumber(nums, target);
+            //AddNumber(nums, target);
+
+
+            Console.WriteLine("Prime numbers between 1 and 100:");
+
+            for (int num = 2; num <= 100; num++)
+            {
+                int count = 0;
+
+                for (int i = 1; i <= num; i++)
+                {
+                    if (num % i == 0)
+                    {
+                        count++;
+                    }
+                }
+
+                if (count == 2)
+                {
+                    Console.WriteLine(num);
+                }
+            }
         }
 
         public static void AddNumber(int[] nums, int target)
